@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.625;
+  color: var(--color-dark-2);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button,
+a,
+input,
+label,
+textarea {
+  cursor: pointer;
+  transition-duration: var(--transition-duration);
+}
+
+button {
+  &:active {
+    scale: 1.05;
+  }
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  padding-inline: var(--container-padding-x);
+  margin-inline: auto;
+}
+
+:focus-visible {
+  outline: 2px dashed var(--color-blue-2);
+  outline-offset: 4px;
+  transition-duration: 0s !important;
+}

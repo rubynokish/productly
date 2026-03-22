@@ -1,0 +1,37 @@
+@use "../utils/" as *;
+
+.header {
+  padding-block: 15px;
+  box-shadow: 0px 4px 20px 0px var(--shadow);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+    }
+
+    &-link {
+      @include hover {
+        color: var(--color-accent-1);
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+  }
+
+  &__button {
+    min-width: 110px;
+    padding-block: 11px;
+  }
+}

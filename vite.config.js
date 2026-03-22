@@ -20,13 +20,6 @@ export default defineConfig({
     port: 3000,
     open: true,
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@use "@styles/utils" as *;`,
-      },
-    },
-  },
   resolve: {
     alias: {
       "@": resolve(__dirname, "src"),

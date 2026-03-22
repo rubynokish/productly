@@ -7,5 +7,7 @@
 @use "./base/base.scss";
 
 // Components
+@use "./components/button.scss";
 
 // Layout
+@use "./layout/header.scss";
