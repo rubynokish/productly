@@ -9,23 +9,30 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "src/index.html")
-      }
-    }
+        main: resolve(__dirname, "src/index.html"),
+      },
+    },
   },
   server: {
     watch: {
-      usePolling: true
+      usePolling: true,
     },
     port: 3000,
-    open: true
+    open: true,
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "@styles/utils" as *;`,
+      },
+    },
   },
   resolve: {
     alias: {
       "@": resolve(__dirname, "src"),
       "@assets": resolve(__dirname, "src/assets"),
       "@styles": resolve(__dirname, "src/styles"),
-      "@scripts": resolve(__dirname, "src/scripts")
-    }
-  }
-})
+      "@scripts": resolve(__dirname, "src/scripts"),
+    },
+  },
+});

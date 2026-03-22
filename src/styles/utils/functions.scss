@@ -1,0 +1,13 @@
+// Функция для перевода px в rem
+// Использование: font-size: rem(16);
+@function rem($pixels, $base: 16px) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($base)) {
+    $base: $base * 1px;
+  }
+
+  @return calc($pixels / $base) * 1rem;
+}
